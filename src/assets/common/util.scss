@@ -1,0 +1,72 @@
+
+//size
+@mixin size ($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+//position
+@mixin positionLocation ($position, $t, $rgt, $btm, $lft) {
+    position: $position;
+    top: $t;
+    right: $rgt;
+    bottom: $btm;
+    left: $lft;
+}
+
+//font
+@mixin font($font-family ,$font-size, $color, $font-weight) {
+    font-family: $font-family;
+    font-size: $font-size;
+    color: $color;
+    font-weight: $font-weight;
+}
+
+//flex
+@mixin flex($direction, $flexDisplay, $justify, $align) {
+    flex-direction: $direction;
+    display: $flexDisplay;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+//margin, padding (margin, top, 값 입력)
+@mixin whiteSpace ($name, $location, $value) {
+    #{$name}-#{$location}: $value;
+}
+
+//nth-child
+@mixin nthChild($location, $size) {
+    $location: $size;
+}
+  
+//background-size
+@mixin backGround($ti, $bgr, $bgs, $bgp) {
+    text-indent: $ti;
+    background-repeat: $bgr;
+    background-size: $bgs;
+    background-position: $bgp;
+}
+
+//가상클래스사용
+@mixin pseudoClass($display, $w, $h) {
+    content: '';
+    display: $display;
+    width: $w;
+    height: $h;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+//말줄임
+@mixin elip($clamp) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: $clamp;
+}
+
+@mixin border($size, $color) {
+    border: #{$size} solid $color;
+}

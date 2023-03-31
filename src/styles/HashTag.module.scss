@@ -1,0 +1,32 @@
+@mixin hashTagCommon {
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222;
+    white-space: nowrap;
+}
+
+.hashTag01 {
+    @include hashTagCommon;
+    border-radius: 16px;
+    font-family: 'NeoM';
+    font-size: 16px;
+    height: 32px;
+    padding: 0px 16px 0;
+    &:hover {
+        color: #12b560;
+        border: 1px solid #12b560;
+        background-color: #f7fffd;
+    }
+}
+
+.hashTag02 {
+    @include hashTagCommon;
+    border-radius: 10px;
+    font-family: 'NeoM';
+    font-size: 12px;
+    padding: 0px 9px 0px 8px;
+    line-height: 18px;
+    height: 20px;
+}

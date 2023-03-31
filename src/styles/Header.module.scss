@@ -1,0 +1,200 @@
+@import '../assets/common/util.scss';
+
+// 최상단 userBar
+.userBar {
+    background-color: #F3F1F2;
+    height: 46px;
+    
+    ul {
+        height: inherit;
+        @include flex(row, flex, flex-end, center);
+    }
+    li {
+        position: relative;
+        line-height: 24px;
+        &:not(:nth-child(2)) {margin-right: 21px;}
+        &:last-child {margin: 0;}
+    }
+    .about {
+
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 1px;
+            height: 11px;
+            background-color: #777;
+            margin: 0 21px 0;
+        }
+    }
+    a {
+        @include font ('NeoM', .875rem, #777, null);
+        line-height: 1.5rem;
+        line-height: 21px;
+        &:hover {color: #12b560;}
+    }
+
+    .basketNum {
+        display: inline-block;
+        margin-left: 5px;
+        @include size(18px, 18px);
+        line-height: 19px;
+        border-radius: 100%;
+        @include font('NeoR', 14px, #fff, null);
+        background: #222;
+        text-align: center;
+    }
+
+}
+
+.gnbMenu {
+    @include flex (row, flex, space-between,center);
+    @include size(100%, 96px);
+    @include whiteSpace(padding, top, 23px);
+}
+.headerSearch {
+    @include size(48.59%, null);
+    @include flex (row, flex, flex-start,center);
+}
+
+.logo {
+    display: block;
+    @include size(346px, 34px);
+}
+
+.searchBarWrapper {
+    @include size(400px, 38px);
+    @include border (2px, #d9d9d9);
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.serchBarInner {
+    position: relative;
+    padding: 0 15px 0;
+    @include size(inherit, inherit);
+    @include flex(row, flex, space-between, center);
+} 
+
+input {
+    border: none;
+    background-color: transparent;
+    @include size(inherit, inherit);
+    &::placeholder {
+        @include font (null, .875rem, #d5d4d4, null);
+    }
+}
+.searchBtn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+// header 우측 list
+.gnbList {
+    @include flex(row, flex, flex-start, center);
+    li { position: relative; }
+    // 첫번째 좌측 margin 제외
+    li:not(:first-of-type) {
+        @include whiteSpace (margin, left, 24px);
+    }
+    .dot {
+        @include positionLocation (absolute, 1px, -9px, null, null);
+        @include size (6px, 6px);
+        background-color: #12b560;
+        border-radius: 100%;
+    }
+
+    a {
+        display: inline-block;
+        @include font ('NeoSB', 1.125rem, #222, 500);
+    }
+}
+
+.category {
+    position: relative;
+    @include font ('NeoM', 1rem, #222, null);
+    border-bottom: 1px solid #a6a6a6;
+    height: 55px;
+    .categoryInner {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        &>div {
+            display: flex; 
+            height: 100%;
+            a{ 
+                display: flex;
+                align-items: center;
+                height: 100%;
+                position: relative;
+            }
+        }
+    }
+    //categoryL 단독
+    .categoryL {
+        div {
+            margin-right: 15px;
+            &:last-child {margin: 0;}
+        }
+    }
+    a:hover {
+        color: #12b560;
+        &:after {
+            content: '';
+            width: 10px;
+            height: 9px;
+            position: absolute;
+            bottom: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: url(../../public/images/depth2_arr.png);
+        }
+    }
+
+}
+
+//카테고리 hover했을 경우 하위 Menu detph
+.depthWrap {
+    @include positionLocation(absolute, 55px, null, null, 50%);
+    transform: translateX(-50%);
+    display: block;
+    width: 1280px;
+    height: 240px;
+    margin: 0 auto;
+    background-color: #fff;
+    @include border(1px, #b6b6b6);
+    border-top: 0;
+    padding: 31px 41px 20px 41px;
+}
+
+.depthWrapInner {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 4);
+    height: 100%;
+    
+    flex-wrap: wrap;
+    .item {
+        width: 149px;
+        margin-bottom: 11px;
+        @include font('NeoSB', 14px, #888, null);
+        &:hover {
+            color: #333;
+            font-weight: bold;
+        }
+    }
+}
+
+.mainSlide {
+    width: 100%;
+    height: 100%;
+    img {
+        display: block;
+        width: 100%;
+    }
+}

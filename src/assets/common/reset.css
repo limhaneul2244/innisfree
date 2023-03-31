@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'NeoM';
+}
+
+:root {
+    /* colorless */
+    --color-gray--01: #fafafa;
+    --color-gray--02: #f4f4f4;
+    --color-gray--03: #222;
+    --color-gray--04: #ccc;
+    --color-gray--05: #999;
+    --color-gray--06: #333;
+    --color-gray--07: #777;
+
+    --color-green--01: #12b560;
+    --color-yellow--02: #ffff89;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+    position: relative;
+}
+/* body {
+    line-height: 1;
+} */
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+input:focus {
+    outline: none;
+}
+a {
+    color: #111;
+    text-decoration: none;
+}
+input, select, textarea, button, pre, a {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	letter-spacing: inherit;
+	color: inherit;
+	text-decoration: none;
+	outline: none;
+}
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+/* 1280 중간 wrap */
+.contentWrap {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* 이미지 위로 어둡게 처리 */
+.pdtImg {
+    position: relative;
+}
+
+.pdtImg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    /* background-color: #fafafa; */
+    background-color: #c17a7a;
+    mix-blend-mode: multiply;
+    z-index: 3;
+}

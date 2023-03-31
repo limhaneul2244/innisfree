@@ -1,0 +1,18 @@
+.grade {
+    display: flex;
+    align-items: center;
+    font-family: 'NeoM';
+    span {
+        display: inline-block;
+        font-size: 14px;
+        color: #777;
+        white-space: nowrap;
+        margin-left: -1px;
+    }
+}
+
+.star {
+    color: #12b560;
+    font-size: 12px;
+    margin-right: 5px;   
+}
