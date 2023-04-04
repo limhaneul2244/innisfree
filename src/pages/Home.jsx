@@ -11,13 +11,13 @@ import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
 
-import Header from '../component/Header/Header';
-import TopBanner from '../component/TopBanner/TopBanner';
-import HashTag, { HashTagType } from '../component/HashTag/HashTag';
-import ProductTitle from '../component/ProductTitle/ProductTitle';
-import Product from '../component/Product/Product';
-import Label, { LabelType } from '../component/Label/Label';
-import ReviewProduct from '../component/ReviewProduct/ReviewProduct';
+import Header from '../component/Header';
+import TopBanner from '../component/TopBanner';
+import HashTag, { HashTagType } from '../component/HashTag';
+import ProductTitle from '../component/ProductTitle';
+import Product from '../component/Product';
+import Label, { LabelType } from '../component/Label';
+import ReviewProduct from '../component/ReviewProduct';
 
 SwiperCore.use([Autoplay, Navigation, Grid]);
 

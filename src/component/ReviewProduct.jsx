@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Grade from '../Grade/Grade';
-import css from '../../styles/ReviewProduct.module.scss';
-import '../../../src/assets/common/reset.css';
+import Grade from './Grade';
+import css from '../styles/ReviewProduct.module.scss';
+import '../../src/assets/common/reset.css';
 import classNames from 'classnames';
 /**
  * @param

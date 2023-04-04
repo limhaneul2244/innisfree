@@ -1,4 +1,4 @@
-import css from '../../styles/HashTag.module.scss';
+import css from '../styles/HashTag.module.scss';
 
 export const HashTagType = {
     type1: 'hashTag01',

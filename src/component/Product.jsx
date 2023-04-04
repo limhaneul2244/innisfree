@@ -1,9 +1,9 @@
-import React, { useCallback, useState } from 'react';
-import '../../assets/common/reset.css';
-import css from '../../styles/Product.module.scss';
+import React, { useState } from 'react';
+import '../assets/common/reset.css';
+import css from '../styles/Product.module.scss';
 
 import classNames from 'classnames';
-import Grade from '../Grade/Grade';
+import Grade from './Grade';
 
 /**
  * @param width @param height

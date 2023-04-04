@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
-import '../../assets/common/reset.css';
-import css from '../../styles/TopBanner.module.scss';
+import '../assets/common/reset.css';
+import css from '../styles/TopBanner.module.scss';
 import classNames from 'classnames';
 
 /**

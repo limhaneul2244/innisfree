@@ -1,8 +1,8 @@
 import React from 'react';
-import MainText from '../MainText/MainText';
-import css from '../../styles/ProductTitle.module.scss';
+import MainText from './MainText';
+import css from '../styles/ProductTitle.module.scss';
 import classNames from 'classnames';
-import '../../assets/common/reset.css';
+import '../assets/common/reset.css';
 
 /**
  * @param titleName 타이틀 이름 

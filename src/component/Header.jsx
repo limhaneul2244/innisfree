@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../../assets/common/reset.css';
-import css from '../../styles/Header.module.scss';
+import '../assets/common/reset.css';
+import css from '../styles/Header.module.scss';
 import classNames from 'classnames';
 
 const Header = () => {

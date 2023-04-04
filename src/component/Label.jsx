@@ -1,6 +1,5 @@
 import React from 'react';
-import css from '../../styles/Label.module.scss';
-import classNames from 'classnames';
+import css from '../styles/Label.module.scss';
 
 export const LabelType = {
     type1: 'lable01', //font 흰, 배경 초
