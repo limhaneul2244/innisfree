@@ -39,7 +39,7 @@
 @mixin nthChild($location, $size) {
     $location: $size;
 }
-  
+
 //background-size
 @mixin backGround($ti, $bgr, $bgs, $bgp) {
     text-indent: $ti;

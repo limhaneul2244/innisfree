@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../assets/common/reset.css';
 import css from '../styles/Header.module.scss';
 import classNames from 'classnames';
+import FloatingMenu from '../component/FloatingMenu';
 
 const Header = () => {
     return (
@@ -29,7 +30,7 @@ const Header = () => {
                         <div className={css.serchBarInner}>
                             <input type="text" placeholder='새로워진 이니스프리 SHOWCASE'/>
                             <button className={css.searchBtn}>
-                                <img src='/icon_search.png' alt="" />
+                                <img src='/images/icon_search.png' alt="" />
                             </button>
                         </div>
                     </div>
@@ -62,10 +63,10 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            
             {/* 슬라이드 영역 */}
             <div className={css.mainSlide}>
                 <img src="/images/mainSlide00.jpg" alt="" />
+                <FloatingMenu/>
             </div>
 
         </>

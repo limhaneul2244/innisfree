@@ -18,6 +18,9 @@ import ProductTitle from '../component/ProductTitle';
 import Product from '../component/Product';
 import Label, { LabelType } from '../component/Label';
 import ReviewProduct from '../component/ReviewProduct';
+import MemberShip from '../component/MemberShip';
+import Footer from '../component/Footer';
+import ScrollTopBanner from '../component/ScrollTopBanner';
 
 SwiperCore.use([Autoplay, Navigation, Grid]);
 
@@ -32,6 +35,7 @@ const Home = () => {
 
     return (
         <>  
+            <ScrollTopBanner/>
             <TopBanner hide={hide} setHide={setHide}/>
             <div className={classNames(hide ?  css.noBannerWrap : css.bannerWrap )}>
                 <Header/>
@@ -293,30 +297,49 @@ const Home = () => {
                                 modules={[Autoplay, Navigation]}
                             >
                                 <SwiperSlide className={classNames(css.reviewShowCase)}>
-                                    <ReviewProduct width={416} height={588}/>
-                                </SwiperSlide>
-                                {/* <SwiperSlide className={classNames(css.reviewShowCase)}>
-                                    <ReviewProduct width={416} height={588}/>
+                                    <ReviewProduct/>
                                 </SwiperSlide>
                                 <SwiperSlide className={classNames(css.reviewShowCase)}>
-                                    <ReviewProduct width={416} height={588}/>
+                                    <ReviewProduct/>
                                 </SwiperSlide>
                                 <SwiperSlide className={classNames(css.reviewShowCase)}>
-                                    <ReviewProduct width={416} height={588}/>
+                                    <ReviewProduct/>
                                 </SwiperSlide>
                                 <SwiperSlide className={classNames(css.reviewShowCase)}>
-                                    <ReviewProduct width={416} height={588}/>
+                                    <ReviewProduct/>
                                 </SwiperSlide>
                                 <SwiperSlide className={classNames(css.reviewShowCase)}>
-                                    <ReviewProduct width={416} height={588}/>
-                                </SwiperSlide> */}
+                                    <ReviewProduct/>
+                                </SwiperSlide>
+                                <SwiperSlide className={classNames(css.reviewShowCase)}>
+                                    <ReviewProduct/>
+                                </SwiperSlide>
+                                <SwiperSlide className={classNames(css.reviewShowCase)}>
+                                    <ReviewProduct/>
+                                </SwiperSlide>
+                                <SwiperSlide className={classNames(css.reviewShowCase)}>
+                                    <ReviewProduct/>
+                                </SwiperSlide>
                             </Swiper>
                             <div className={`${css['swiper-button-prev']} swiper-button-prev`}></div>
                             <div className={`${css['swiper-button-next']} swiper-button-next`}></div>
                         </div>
                     </div>
                 </div>
+
+                {/* 멤버십 혜택 안내 */}
+                <div className={classNames(css.memberShip, 'contentWrap')}>
+                    <ProductTitle titleName={'이니스프리 멤버십 혜택 안내'} directName={'혜택'} rankingToggle={false}/>
+                    <div className={css.memberShipList}>
+                        <MemberShip mainTitle={'멤버십데이 혜택'} subTitle={'등급별 할인혜택'}/>
+                        <MemberShip mainTitle={'시크릿쿠폰'} subTitle={'월1회 할인쿠폰제공'}/>
+                        <MemberShip mainTitle={'구매 적립'} subTitle={'구매 금액 1% 적립'}/>
+                        <MemberShip mainTitle={'생일 혜택'} subTitle={'등급별 할인혜택'}/>
+                        <MemberShip mainTitle={'그린티클럽키트'} subTitle={'연 2회 신청'}/>
+                    </div>
+                </div>
             </div>
+            <Footer/>
         </>
     );
 }

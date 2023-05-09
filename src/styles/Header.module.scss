@@ -114,6 +114,7 @@ input {
 }
 
 .category {
+    z-index: 10;
     position: relative;
     @include font ('NeoM', 1rem, #222, null);
     border-bottom: 1px solid #a6a6a6;
@@ -125,20 +126,21 @@ input {
         align-items: center;
         height: 100%;
         &>div {
-            display: flex; 
+            display: inline-flex; 
             height: 100%;
+            justify-content: flex-end;
             a{ 
+                position: relative;
                 display: flex;
                 align-items: center;
                 height: 100%;
-                position: relative;
             }
         }
     }
     //categoryL 단독
     .categoryL {
         div {
-            margin-right: 15px;
+            padding-right: 15px;
             &:last-child {margin: 0;}
         }
     }
@@ -191,9 +193,9 @@ input {
 }
 
 .mainSlide {
-    width: 100%;
-    height: 100%;
-    img {
+    position: relative;
+    @include size(100%, 100%);
+    >img {
         display: block;
         width: 100%;
     }

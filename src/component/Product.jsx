@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import '../assets/common/reset.css';
 import css from '../styles/Product.module.scss';
-
 import classNames from 'classnames';
 import Grade from './Grade';
+import Price from './Price';
 
 /**
  * @param width @param height
@@ -44,11 +44,7 @@ const Product = ({width, height, id}) => {
                     </div>
                     <div className={css.pdtContent}>
                         <div className={css.elip}>납작 브로우 펜슬 납작 브로우 펜슬 납작 브로우 펜슬 납작 브로우 펜슬 납작 브로우 펜슬 납작 브로우 펜슬</div>
-                        <div className={css.price}>
-                            <span className={css.dcPrice}>2,700</span>
-                            <span className={css.cost}>4,500</span>
-                            <span className={css.discount}>~40%</span>
-                        </div>
+                        <Price/>
                         <Grade/>
                     </div>
 

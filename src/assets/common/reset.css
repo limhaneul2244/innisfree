@@ -166,6 +166,11 @@ button {
     cursor: pointer;
     background-color: transparent;
     border: none;
+    outline: none;
+    border: 0;
+    border-radius: 0;
+    margin:0;
+    padding: 0;
 }
 
 /* 1280 중간 wrap */
@@ -179,7 +184,10 @@ button {
 .pdtImg {
     position: relative;
 }
-
+.pdtImg img {
+    display: block;
+    width: 100%;
+}
 .pdtImg::after {
     content: '';
     position: absolute;
@@ -189,8 +197,7 @@ button {
     height: 100%;
     border-radius: 5px;
     overflow: hidden;
-    /* background-color: #fafafa; */
-    background-color: #c17a7a;
+    background-color: #fafafa;
     mix-blend-mode: multiply;
     z-index: 3;
 }

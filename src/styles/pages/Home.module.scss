@@ -147,7 +147,6 @@
         bottom: 0;
         width: calc(50% - 642px);
         background: rgba(250,250,250,0.5);
-        border: 1px solid red;
     }
 
     &::after {
@@ -159,7 +158,6 @@
         bottom: 0;
         width: calc(50% - 642px);
         background: rgba(250,250,250,0.5);
-        border: 1px solid red;
     }
 }
 
@@ -377,5 +375,15 @@
 
     .reviewShowCase {
         max-width: 416px;
+        height: 588px;
     }
+}
+
+//멤버십 혜택 안내
+.memberShip {
+    padding: 96px 0 110px;
+}
+.memberShipList {
+    display: flex;
+    justify-content: space-around;
 }
